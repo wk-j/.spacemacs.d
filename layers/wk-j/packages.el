@@ -31,10 +31,10 @@
 
 (defconst wk-j-packages
   '(
-    all-the-icon
+    (cake-mode :location (recipe
+                          :fetcher github
+                          :repo "wk-j/cake-mode"))
     ))
 
-(defun wk-j/init-all-the-icon ()
-  (use-package all-the-icon))
 
 ;;; packages.el ends here

@@ -20,9 +20,8 @@
    dotspacemacs-configuration-layers
    '(
      ;; wk-j
-     ;;wk-j
+     wk-j
      robot
-     ;;vue
 
      ;; standard
      yaml

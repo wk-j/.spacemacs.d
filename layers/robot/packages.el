@@ -38,3 +38,5 @@
                            :repo "wk-j/robot-mode"))
 
     ))
+
+;;; packages.el ends here

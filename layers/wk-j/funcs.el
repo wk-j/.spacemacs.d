@@ -1,3 +1,14 @@
+;; wk-j
+;; (desktop-save-mode 1)
+
+(require 'all-the-icons nil 'noerror)
+
+(setq scroll-conservatively 1000)
+(setq mouse-wheel-scroll-amount '(1))
+(setq mouse-wheel-progressive-speed nil)
+
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+
 (when (window-system)
   (set-default-font "Fira Code"))
 
@@ -9,7 +20,7 @@
                (42 . ".\\(?:\\(?:\\*\\*/\\)\\|\\(?:\\*[*/]\\)\\|[*/>]\\)")
                (43 . ".\\(?:\\(?:\\+\\+\\)\\|[+>]\\)")
                (45 . ".\\(?:\\(?:-[>-]\\|<<\\|>>\\)\\|[<>}~-]\\)")
-               (46 . ".\\(?:\\(?:\\.[.<]\\)\\|[.=-]\\)")
+               ;;(46 . ".\\(?:\\(?:\\.[.<]\\)\\|[.=-]\\)")
                (47 . ".\\(?:\\(?:\\*\\*\\|//\\|==\\)\\|[*/=>]\\)")
                (48 . ".\\(?:x[a-zA-Z]\\)")
                (58 . ".\\(?:::\\|[:=]\\)")

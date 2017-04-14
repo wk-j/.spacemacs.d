@@ -31,10 +31,24 @@
 
 (defconst wk-j-packages
   '(
+    all-the-icons
+
+    (litable :location (recipe
+                        :fetcher github
+                        :repo "fuco1/litable"))
+
     (cake-mode :location (recipe
                           :fetcher github
                           :repo "wk-j/cake-mode"))
     ))
 
+(defun wk-j/init-litable ()
+  (use-package litable))
 
-;;; packages.el ends here
+(defun wk-j/init-all-the-icons ()
+  (use-package all-the-icons))
+
+(defun wk-j/init-cake-mode ()
+  (use-package cake-mode))
+
+;; packages.el ends here

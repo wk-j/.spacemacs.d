@@ -1,4 +1,4 @@
-;;; packages.el --- robot layer packages file for Spacemacs.
+;;; packages.el --- wk-j layer packages file for Spacemacs.
 ;;
 ;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
 ;;
@@ -18,23 +18,23 @@
 ;;
 ;;
 ;; Briefly, each package to be installed or configured by this layer should be
-;; added to `robot-packages'. Then, for each package PACKAGE:
+;; added to `wk-j-packages'. Then, for each package PACKAGE:
 ;;
 ;; - If PACKAGE is not referenced by any other Spacemacs layer, define a
-;;   function `robot/init-PACKAGE' to load and initialize the package.
+;;   function `wk-j/init-PACKAGE' to load and initialize the package.
 
 ;; - Otherwise, PACKAGE is already referenced by another Spacemacs layer, so
-;;   define the functions `robot/pre-init-PACKAGE' and/or
-;;   `robot/post-init-PACKAGE' to customize the package as it is loaded.
+;;   define the functions `wk-j/pre-init-PACKAGE' and/or
+;;   `wk-j/post-init-PACKAGE' to customize the package as it is loaded.
 
 ;;; Code:
 
-(defconst robot-packages
+(defconst wk-j-packages
   '(
-
-    ;; robot framework
-    (robot-mode :location (recipe
-                           :fetcher github
-                           :repo "wk-j/robot-mode"))
-
+    all-the-icon
     ))
+
+(defun wk-j/init-all-the-icon ()
+  (use-package all-the-icon))
+
+;;; packages.el ends here

@@ -9,6 +9,8 @@
 
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
+(add-to-list 'auto-mode-alist '("\\.cake\\'" . csharp-mode))
+
 (when (window-system)
   (set-default-font "Fira Code"))
 

@@ -8,6 +8,10 @@
 (setq mouse-wheel-progressive-speed nil)
 
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+(setq neo-window-fixed-size nil)
+(setq make-backup-files nil)
+
+(setq-default fsharp-indent-offset 4)
 
 (add-to-list 'auto-mode-alist '("\\.cake\\'" . csharp-mode))
 

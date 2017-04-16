@@ -13,6 +13,7 @@
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     javascript
      ;; wk-j
      wk-j
      ;;robot

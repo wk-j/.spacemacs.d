@@ -13,6 +13,7 @@
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     markdown
      javascript
      ;; wk-j
      wk-j
@@ -89,7 +90,7 @@ before layers configuration."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Fira Code"
-                               :size 14
+                               :size 15
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -182,7 +183,7 @@ layers configuration."
  '(ahs-inhibit-face-list nil)
  '(package-selected-packages
    (quote
-    (litable dash cake-mode robot-mode all-the-icons font-lock+ ssass-mode vue-html-mode vue-mode phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode flycheck-pos-tip helm-company helm-c-yasnippet fuzzy company-tern dash-functional tern company-statistics auto-yasnippet ac-ispell omnisharp shut-up auto-complete csharp-mode yaml-mode web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc coffee-mode mmm-mode markdown-toc markdown-mode fsharp-mode flycheck company-quickhelp pos-tip company ws-butler winum which-key uuidgen toc-org spaceline restart-emacs request popwin persp-mode pcre2el spinner org-plus-contrib org-bullets lorem-ipsum link-hint hydra hl-todo parent-mode hide-comnt help-fns+ projectile pkg-info epl helm-flx flx eyebrowse evil-visual-mark-mode evil-unimpaired evil-mc smartparens evil-indent-plus iedit evil-ediff anzu evil goto-chg undo-tree highlight dumb-jump f s diminish define-word column-enforce-mode bind-map bind-key auto-compile packed ace-jump-helm-line helm avy helm-core popup async macrostep elisp-slime-nav window-numbering volatile-highlights vi-tilde-fringe use-package smooth-scrolling rfringe rainbow-delimiters powerline paradox page-break-lines open-junk-file neotree move-text linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete hl-anything highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-descbinds helm-ag guide-key-tip google-translate golden-ratio gh-md fringe-helper flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-terminal-cursor-changer evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link ace-jump-mode)))
+    (parinfer litable dash cake-mode robot-mode all-the-icons font-lock+ ssass-mode vue-html-mode vue-mode phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode flycheck-pos-tip helm-company helm-c-yasnippet fuzzy company-tern dash-functional tern company-statistics auto-yasnippet ac-ispell omnisharp shut-up auto-complete csharp-mode yaml-mode web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc coffee-mode mmm-mode markdown-toc markdown-mode fsharp-mode flycheck company-quickhelp pos-tip company ws-butler winum which-key uuidgen toc-org spaceline restart-emacs request popwin persp-mode pcre2el spinner org-plus-contrib org-bullets lorem-ipsum link-hint hydra hl-todo parent-mode hide-comnt help-fns+ projectile pkg-info epl helm-flx flx eyebrowse evil-visual-mark-mode evil-unimpaired evil-mc smartparens evil-indent-plus iedit evil-ediff anzu evil goto-chg undo-tree highlight dumb-jump f s diminish define-word column-enforce-mode bind-map bind-key auto-compile packed ace-jump-helm-line helm avy helm-core popup async macrostep elisp-slime-nav window-numbering volatile-highlights vi-tilde-fringe use-package smooth-scrolling rfringe rainbow-delimiters powerline paradox page-break-lines open-junk-file neotree move-text linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete hl-anything highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-descbinds helm-ag guide-key-tip google-translate golden-ratio gh-md fringe-helper flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-terminal-cursor-changer evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link ace-jump-mode)))
  '(ring-bell-function (quote ignore)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

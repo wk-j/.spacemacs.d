@@ -31,6 +31,7 @@
 
 (defconst wk-j-packages
   '(all-the-icons
+    request
     parinfer
     (litable :location (recipe
                         :fetcher github
@@ -39,8 +40,12 @@
                           :fetcher github
                           :repo "wk-j/cake-mode")))) 
 
+
 (defun wk-j/init-litable ()
   (use-package litable))
+
+(defun wk-j/init-request()
+  (use-package request))
 
 (defun wk-j/init-all-the-icons ()
   (use-package all-the-icons))

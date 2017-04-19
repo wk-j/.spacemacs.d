@@ -36,10 +36,10 @@
     (litable :location (recipe
                         :fetcher github
                         :repo "fuco1/litable"))
-    (cake-mode :location (recipe
-                          :fetcher github
-                          :repo "wk-j/cake-mode")))) 
-
+    ;;(cake-mode :location (recipe
+    ;;                      :fetcher github
+    ;;                      :repo "wk-j/cake-mode")))) 
+))
 
 (defun wk-j/init-litable ()
   (use-package litable))

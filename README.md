@@ -1,1 +1,1 @@
-## Spacemacs Configurations
+## Spacemacs

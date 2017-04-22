@@ -16,8 +16,8 @@
 (add-to-list 'auto-mode-alist '("\\.cake\\'" . csharp-mode))
 
 ;; Font
-(when (window-system)
-  (set-default-font "Fira Code"))
+;;(when (window-system)
+;;  (set-default-font "Fira Code"))
 
 (let ((alist '((33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
                (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")

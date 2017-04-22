@@ -3,6 +3,10 @@
 ;; It must be stored in your home directory.
 
 
+(add-to-list 'auto-mode-alist '("\\.fsproj\\'" . xml-mode))
+(add-to-list 'auto-mode-alist '("\\.csproj\\'" . xml-mode))
+
+
 (defun dotspacemacs/layers ()
   "Configuration Layers declaration."
   (setq-default
@@ -13,6 +17,9 @@
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     fsharp
+     html
+     racket
      markdown
      javascript
      ;; wk-j
@@ -23,7 +30,7 @@
      ;;yaml
      ;;javascript
      ;;markdown
-     fsharp
+                                        ; fsharp
      csharp
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -32,14 +39,14 @@
      ;; ----------------------------------------------------------------
      auto-completion
      ;; better-defaults
-     emacs-lisp
-     ;; (git :variables
-     ;;      git-gutter-use-fringe t)
-     ;; markdown
-     ;; org
-     ;; shell
-     ;; syntax-checking
-     )
+     emacs-lisp)
+   ;; (git :variables
+   ;;      git-gutter-use-fringe t)
+   ;; markdown
+   ;; org
+   ;; shell
+   ;; syntax-checking
+   
    ;; List of additional packages that will be installed wihout being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages then consider to create a layer, you can also put the
@@ -80,8 +87,14 @@ before layers configuration."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(monokai
+   dotspacemacs-themes '(
+                         monokai
+                         dorsey
+                         ample-flat
+                         spacegray
                          solarized-dark
+                         brin
+                         dakrone
                          leuven
                          zenburn
                          solarized-light)
@@ -89,8 +102,8 @@ before layers configuration."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Fira Code"
-                               :size 13
+   dotspacemacs-default-font '("Iosevka"
+                               :size 15
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -176,14 +189,17 @@ layers configuration."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ahs-case-fold-search nil)
- '(ahs-default-range (quote ahs-range-whole-buffer))
- '(ahs-idle-interval 0.25)
+ '(ahs-case-fold-search nil t)
+ '(ahs-default-range (quote ahs-range-whole-buffer) t)
+ '(ahs-idle-interval 0.25 t)
  '(ahs-idle-timer 0 t)
- '(ahs-inhibit-face-list nil)
+ '(ahs-inhibit-face-list nil t)
+ '(ansi-color-names-vector
+   ["#0a0814" "#f2241f" "#67b11d" "#b1951d" "#4f97d7" "#a31db1" "#28def0" "#b2b2b2"])
+ '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
    (quote
-    (parinfer litable dash cake-mode robot-mode all-the-icons font-lock+ ssass-mode vue-html-mode vue-mode phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode flycheck-pos-tip helm-company helm-c-yasnippet fuzzy company-tern dash-functional tern company-statistics auto-yasnippet ac-ispell omnisharp shut-up auto-complete csharp-mode yaml-mode web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc coffee-mode mmm-mode markdown-toc markdown-mode fsharp-mode flycheck company-quickhelp pos-tip company ws-butler winum which-key uuidgen toc-org spaceline restart-emacs request popwin persp-mode pcre2el spinner org-plus-contrib org-bullets lorem-ipsum link-hint hydra hl-todo parent-mode hide-comnt help-fns+ projectile pkg-info epl helm-flx flx eyebrowse evil-visual-mark-mode evil-unimpaired evil-mc smartparens evil-indent-plus iedit evil-ediff anzu evil goto-chg undo-tree highlight dumb-jump f s diminish define-word column-enforce-mode bind-map bind-key auto-compile packed ace-jump-helm-line helm avy helm-core popup async macrostep elisp-slime-nav window-numbering volatile-highlights vi-tilde-fringe use-package smooth-scrolling rfringe rainbow-delimiters powerline paradox page-break-lines open-junk-file neotree move-text linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete hl-anything highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-descbinds helm-ag guide-key-tip google-translate golden-ratio gh-md fringe-helper flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-terminal-cursor-changer evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link ace-jump-mode)))
+    (web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data racket-mode faceup parinfer litable dash cake-mode robot-mode all-the-icons font-lock+ ssass-mode vue-html-mode vue-mode phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode flycheck-pos-tip helm-company helm-c-yasnippet fuzzy company-tern dash-functional tern company-statistics auto-yasnippet ac-ispell omnisharp shut-up auto-complete csharp-mode yaml-mode web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc coffee-mode mmm-mode markdown-toc markdown-mode fsharp-mode flycheck company-quickhelp pos-tip company ws-butler winum which-key uuidgen toc-org spaceline restart-emacs request popwin persp-mode pcre2el spinner org-plus-contrib org-bullets lorem-ipsum link-hint hydra hl-todo parent-mode hide-comnt help-fns+ projectile pkg-info epl helm-flx flx eyebrowse evil-visual-mark-mode evil-unimpaired evil-mc smartparens evil-indent-plus iedit evil-ediff anzu evil goto-chg undo-tree highlight dumb-jump f s diminish define-word column-enforce-mode bind-map bind-key auto-compile packed ace-jump-helm-line helm avy helm-core popup async macrostep elisp-slime-nav window-numbering volatile-highlights vi-tilde-fringe use-package smooth-scrolling rfringe rainbow-delimiters powerline paradox page-break-lines open-junk-file neotree move-text linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete hl-anything highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-descbinds helm-ag guide-key-tip google-translate golden-ratio gh-md fringe-helper flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-terminal-cursor-changer evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link ace-jump-mode)))
  '(ring-bell-function (quote ignore)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
